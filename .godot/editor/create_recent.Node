@@ -1,0 +1,11 @@
+AnimationPlayer
+Label
+Panel
+Button
+Control
+CanvasLayer
+CanvasGroup
+TileMap
+ParallaxBackground
+Sprite2D
+ParallaxLayer

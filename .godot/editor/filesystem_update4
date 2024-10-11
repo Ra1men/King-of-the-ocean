@@ -1,0 +1,5 @@
+res://Scenes/Player/Player.tscn
+res://Scenes/Enemy/EnemyFish.tscn
+res://Scenes/GameOverScene.tscn
+res://Scenes/StartGame.tscn
+res://Scenes/MainScene.tscn

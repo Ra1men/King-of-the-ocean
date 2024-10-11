@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://j3ktaomhag8w"]
+
+[ext_resource type="Texture2D" uid="uid://d3dmxwu1812xh" path="res://Background/sea_background.png" id="2_uaopq"]
+[ext_resource type="Script" path="res://Script/FishSpawner.gd" id="3_ookas"]
+[ext_resource type="Texture2D" uid="uid://dq13w2jmr7r70" path="res://Background/farground.png" id="3_wdfw2"]
+[ext_resource type="Texture2D" uid="uid://blkxtnmieridy" path="res://Background/mid_background.png" id="4_yuv6n"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Fishspawner" type="Node" parent="."]
+script = ExtResource("3_ookas")
+spawn_rate = 0.1
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="Layer" type="ParallaxLayer" parent="Background"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Layer"]
+position = Vector2(956, 541.371)
+texture = ExtResource("2_uaopq")
+
+[node name="Layer2" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Layer2"]
+position = Vector2(954, 551)
+texture = ExtResource("3_wdfw2")
+
+[node name="Layer3" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Layer3"]
+position = Vector2(954, 642)
+texture = ExtResource("4_yuv6n")
