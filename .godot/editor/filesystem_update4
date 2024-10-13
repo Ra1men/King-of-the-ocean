@@ -1,5 +1,9 @@
 res://Scenes/Player/Player.tscn
 res://Scenes/Enemy/EnemyFish.tscn
+res://Scenes/Enemy/EnemyFish.gd
+res://Script/Fish.gd
+res://Scenes/Player/Player.gd
 res://Scenes/GameOverScene.tscn
-res://Scenes/StartGame.tscn
 res://Scenes/MainScene.tscn
+res://Scenes/StartGame.tscn
+res://Script/FishSpawner.gd

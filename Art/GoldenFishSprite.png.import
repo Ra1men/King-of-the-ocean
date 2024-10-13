@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cck825iytffom"
-path="res://.godot/imported/NewSpriteEdit.png-15db88c5164f7525f8cd0d875a0d17e6.ctex"
+uid="uid://nvcmqqf6grno"
+path="res://.godot/imported/GoldenFishSprite.png-8289b49aedced27b389edf0455b11856.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/NewSpriteEdit.png"
-dest_files=["res://.godot/imported/NewSpriteEdit.png-15db88c5164f7525f8cd0d875a0d17e6.ctex"]
+source_file="res://Art/GoldenFishSprite.png"
+dest_files=["res://.godot/imported/GoldenFishSprite.png-8289b49aedced27b389edf0455b11856.ctex"]
 
 [params]
 

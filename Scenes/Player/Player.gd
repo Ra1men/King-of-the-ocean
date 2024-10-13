@@ -2,17 +2,15 @@ extends Fish
 
 signal player_died
 @export var player_body : CharacterBody2D
-var edge_of_screen := Vector2(1920,1080)
+var edge_of_screen := Vector2(2880,1080)
 var fish_velocity : Vector2
 @export var acceleration = 10
 
 
 func _ready():
-	super()
 	start()
 
 func _physics_process(delta):
-	turn()
 	move_player(delta)
 	position.x = clampf(position.x, 0, edge_of_screen.x) 
 	position.y = clampf(position.y, 0, edge_of_screen.y)
@@ -23,13 +21,24 @@ func move_player(delta):
 		fish_velocity = fish_velocity.move_toward(Vector2.ZERO, acceleration * delta)
 	else:
 		fish_velocity = fish_velocity.move_toward(direction * move_speed, acceleration * delta)
+		if(direction == Vector2.LEFT  ||
+			 Input.is_action_pressed("move_left") && Input.is_action_pressed("move_up") ||
+			 Input.is_action_pressed("move_left") && Input.is_action_pressed("move_down")):
+			animation.play("move_left")
+			state = "move_left"
+		elif(direction == Vector2.RIGHT  ||
+			 Input.is_action_pressed("move_right") && Input.is_action_pressed("move_up") ||
+			 Input.is_action_pressed("move_right") && Input.is_action_pressed("move_down")):
+			animation.play("move_right")
+			state = "move_right"
+		else:
+			animation.play(state)
 	player_body.velocity = fish_velocity
 	player_body.move_and_slide()
 	
 func grow():
 	
 	size += 1
-	text.text = str(size)
 	var new_scale = SizeManager.determine_size(size)
 	if GameManager.score > GameManager.best_score:
 		GameManager.best_score = GameManager.score
@@ -48,5 +57,4 @@ func start():
 	show()
 	set_process(true)
 	size = 5;
-	text.text = str(size)
 	self.scale = SizeManager.determine_size(size)

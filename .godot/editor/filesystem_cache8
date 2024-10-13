@@ -1,16 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1728635218
-::res://Art/::1728587552
-Enemy (1).png::CompressedTexture2D::2291503172233374635::1728587534::1728587552::1::::<><>::
-file (1).png::CompressedTexture2D::5146201920891798123::1727774385::1727774475::1::::<><>::
-fish-1.png::CompressedTexture2D::1781636656744809430::1728583563::1728583590::1::::<><>::
-FishSprite.png::CompressedTexture2D::6523750022385702497::1719511597::1727609835::1::::<><>::
-FishSpriteTeal.png::CompressedTexture2D::8045274951065201177::1719511597::1727609835::1::::<><>::
-GoldenFishSprite.png::CompressedTexture2D::39008455740092271::1727728262::1727728310::1::::<><>::
+::res://::1728801859
+::res://Art/::1728805295
+EnemySprite.png::CompressedTexture2D::1962245257853063385::1728805260::1728806394::1::::<><>::
+file (1).png::CompressedTexture2D::5146201920891798123::1727774385::1728637448::1::::<><>::
+GoldenFishSprite.png::CompressedTexture2D::955950629001400396::1728805070::1728805225::1::::<><>::
 GoldfishIcon.png::CompressedTexture2D::5362501449212458981::1727704680::1727705087::1::::<><>::
-NewSprite.png::CompressedTexture2D::5757035826564384151::1727767716::1727767758::1::::<><>::
 NewSpriteEdit.png::CompressedTexture2D::4935916298574573140::1727772233::1727772814::1::::<><>::
-SpriteNEWENEMY.png::CompressedTexture2D::6934947545243890569::1728584961::1728585027::1::::<><>::
 ::res://Art/Props/::1727636315
 GUI.png::CompressedTexture2D::8887861893041685358::1727287906::1727625459::1::::<><>::
 King.png::CompressedTexture2D::7121316870013077427::1727636249::1727636315::1::::<><>::
@@ -23,20 +18,20 @@ mid_background.png::CompressedTexture2D::3180572863880587878::1618314370::172761
 sea_background.png::CompressedTexture2D::9131513671015664929::1618314310::1727619785::1::::<><>::
 ::res://Fonts/::1727701748
 novem___.ttf::FontFile::4456733596662605809::1727701719::1727701748::1::::<><>::
-::res://Scenes/::1728630404
-GameOverScene.tscn::PackedScene::7302457798372009575::1728587621::0::1::::<><>::res://Script/GameOverScript.gd<>uid://dyvl10uf87nlu::::res://Art/Props/GUI.png<>uid://b4q40snf0kr8l::::res://Fonts/novem___.ttf
-MainScene.tscn::PackedScene::690143292049672192::1728630404::0::1::::<><>::uid://d3dmxwu1812xh::::res://Background/sea_background.png<>res://Script/FishSpawner.gd<>uid://dq13w2jmr7r70::::res://Background/farground.png<>uid://blkxtnmieridy::::res://Background/mid_background.png
+::res://Scenes/::1728765396
+GameOverScene.tscn::PackedScene::7302457798372009575::1728765396::0::1::::<><>::res://Script/GameOverScript.gd<>uid://dyvl10uf87nlu::::res://Art/Props/GUI.png<>uid://b4q40snf0kr8l::::res://Fonts/novem___.ttf
+MainScene.tscn::PackedScene::690143292049672192::1728765396::0::1::::<><>::uid://d3dmxwu1812xh::::res://Background/sea_background.png<>res://Script/FishSpawner.gd<>uid://dq13w2jmr7r70::::res://Background/farground.png<>uid://blkxtnmieridy::::res://Background/mid_background.png
 StartGame.gd::GDScript::-1::1727710395::0::1::::<>Control<>::
-StartGame.tscn::PackedScene::5397005317194819353::1728587626::0::1::::<><>::uid://dyvl10uf87nlu::::res://Art/Props/GUI.png<>res://Scenes/StartGame.gd<>uid://d3dmxwu1812xh::::res://Background/sea_background.png<>uid://dq13w2jmr7r70::::res://Background/farground.png<>uid://blkxtnmieridy::::res://Background/mid_background.png<>uid://cy7fhepq7lnav::::res://Art/FishSprite.png<>uid://dmvgrdqquqy1f::::res://Art/FishSpriteTeal.png<>uid://c8pvbv71kdlap::::res://Art/Props/King.png<>uid://35abyph8ffbu::::res://Art/Props/Of the ocean.png<>uid://b4q40snf0kr8l::::res://Fonts/novem___.ttf
-::res://Scenes/Enemy/::1728630435
-EnemyFish.gd::GDScript::-1::1728630435::0::1::::EnemyFish<>Fish<>::
-EnemyFish.tscn::PackedScene::1639386442044997678::1728630434::0::1::::<><>::res://Scenes/Enemy/EnemyFish.gd<>uid://dmvgrdqquqy1f::::res://Art/FishSpriteTeal.png
-::res://Scenes/Player/::1728587614
-Player.gd::GDScript::-1::1727712605::0::1::::<>Fish<>::
-Player.tscn::PackedScene::7564995355455021727::1728587614::0::1::::<><>::res://Scenes/Player/Player.gd<>uid://7waytflemvax::::res://Art/Enemy (1).png
-::res://Script/::1728630404
-Fish.gd::GDScript::-1::1727621237::0::1::::Fish<>Node2D<>::
-FishSpawner.gd::GDScript::-1::1728630404::0::1::::<>Node<>::
+StartGame.tscn::PackedScene::5397005317194819353::1728765396::0::1::::<><>::uid://dyvl10uf87nlu::::res://Art/Props/GUI.png<>res://Scenes/StartGame.gd<>uid://d3dmxwu1812xh::::res://Background/sea_background.png<>uid://dq13w2jmr7r70::::res://Background/farground.png<>uid://blkxtnmieridy::::res://Background/mid_background.png<>uid://c8pvbv71kdlap::::res://Art/Props/King.png<>uid://35abyph8ffbu::::res://Art/Props/Of the ocean.png<>uid://bahfmumu6x7h1::::res://Background/foreground.png<>uid://b4q40snf0kr8l::::res://Fonts/novem___.ttf
+::res://Scenes/Enemy/::1728805196
+EnemyFish.gd::GDScript::-1::1728764854::0::1::::EnemyFish<>Fish<>::
+EnemyFish.tscn::PackedScene::1639386442044997678::1728805196::0::1::::<><>::res://Scenes/Enemy/EnemyFish.gd
+::res://Scenes/Player/::1728805193
+Player.gd::GDScript::-1::1728764919::0::1::::<>Fish<>::
+Player.tscn::PackedScene::7564995355455021727::1728805193::0::1::::<><>::res://Scenes/Player/Player.gd
+::res://Script/::1728765092
+Fish.gd::GDScript::-1::1728765092::0::1::::Fish<>Node2D<>::
+FishSpawner.gd::GDScript::-1::1728637914::0::1::::<>Node<>::
 GameManager.gd::GDScript::-1::1727718089::0::1::::<>Node<>::
 GameOverScript.gd::GDScript::-1::1727712659::0::1::::<>Control<>::
 SizeCalculator.gd::GDScript::-1::1727705501::0::1::::<>Node<>::

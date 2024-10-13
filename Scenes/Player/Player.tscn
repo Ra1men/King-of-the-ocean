@@ -1,50 +1,89 @@
-[gd_scene load_steps=5 format=3 uid="uid://df1smrxqvv78f"]
+[gd_scene load_steps=11 format=3 uid="uid://df1smrxqvv78f"]
 
 [ext_resource type="Script" path="res://Scenes/Player/Player.gd" id="1_lqb5t"]
-[ext_resource type="Texture2D" uid="uid://cck825iytffom" path="res://Art/NewSpriteEdit.png" id="2_t8nhb"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_etbk2"]
-font_size = 32
-outline_size = 1
-outline_color = Color(0, 0, 0, 1)
+[ext_resource type="Texture2D" uid="uid://nvcmqqf6grno" path="res://Art/GoldenFishSprite.png" id="2_jfxk5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mxfvp"]
-radius = 26.0
+radius = 30.0
 height = 118.0
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("player_body", "text", "sprite") groups=["player"]]
-position = Vector2(0, -1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccjg1"]
+atlas = ExtResource("2_jfxk5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plbva"]
+atlas = ExtResource("2_jfxk5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk4g6"]
+atlas = ExtResource("2_jfxk5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osuvu"]
+atlas = ExtResource("2_jfxk5")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1364j"]
+atlas = ExtResource("2_jfxk5")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74088"]
+atlas = ExtResource("2_jfxk5")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_613xj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccjg1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plbva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dk4g6")
+}],
+"loop": true,
+"name": &"move_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_osuvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1364j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74088")
+}],
+"loop": true,
+"name": &"move_right",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("player_body") groups=["player"]]
+position = Vector2(1438, 531)
 script = ExtResource("1_lqb5t")
 player_body = NodePath(".")
 acceleration = 800
 move_speed = 600.0
-text = NodePath("Label")
-sprite = NodePath("Sprite")
-
-[node name="Label" type="Label" parent="."]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = 88.0
-offset_right = 20.0
-offset_bottom = 111.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "0"
-label_settings = SubResource("LabelSettings_etbk2")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5)
+position = Vector2(-13, 9)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_mxfvp")
 
-[node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(1, 3)
-scale = Vector2(0.23, 0.23)
-texture = ExtResource("2_t8nhb")
-hframes = 4
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5, 1)
+scale = Vector2(4.3, 4.3)
+sprite_frames = SubResource("SpriteFrames_613xj")
+animation = &"move_left"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 10)
+limit_left = 0
+limit_top = 0
+limit_right = 2880
+limit_bottom = 1080
+editor_draw_limits = true
