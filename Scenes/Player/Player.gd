@@ -42,7 +42,7 @@ func grow():
 	var new_scale = SizeManager.determine_size(size)
 	if GameManager.score > GameManager.best_score:
 		GameManager.best_score = GameManager.score
-	if size == 85:
+	if size == 75:
 		player_died.emit()
 		queue_free()
 		GameManager.victory()

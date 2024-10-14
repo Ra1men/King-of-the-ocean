@@ -1,13 +1,2 @@
-res://Scenes/AudioManager.tscn
-res://Script/AudioManager.gd
-res://Scenes/Player/Player.tscn
-res://Script/GameManager.gd
-res://Script/SizeCalculator.gd
-res://Scenes/GameOverScene.tscn
-res://Scenes/MainScene.tscn
-res://Scenes/Enemy/EnemyFish.tscn
 res://Scenes/StartGame.tscn
-res://Scenes/Victory.tscn
 res://Scenes/Player/Player.gd
-res://Script/Victory.gd
-res://Script/FishSpawner.gd
