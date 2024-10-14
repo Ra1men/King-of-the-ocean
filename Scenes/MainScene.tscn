@@ -12,32 +12,6 @@
 script = ExtResource("3_ookas")
 spawn_rate = 0.1
 
-[node name="Layer" type="ParallaxLayer" parent="Fishspawner"]
-visible = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Fishspawner/Layer"]
-visible = false
-position = Vector2(956, 541.371)
-texture = ExtResource("2_uaopq")
-
-[node name="Layer2" type="ParallaxLayer" parent="Fishspawner"]
-visible = false
-motion_scale = Vector2(0.2, 0.2)
-
-[node name="Sprite2D" type="Sprite2D" parent="Fishspawner/Layer2"]
-visible = false
-position = Vector2(954, 551)
-texture = ExtResource("3_wdfw2")
-
-[node name="Layer3" type="ParallaxLayer" parent="Fishspawner"]
-visible = false
-motion_scale = Vector2(0.3, 0.3)
-
-[node name="Sprite2D" type="Sprite2D" parent="Fishspawner/Layer3"]
-visible = false
-position = Vector2(954, 642)
-texture = ExtResource("4_yuv6n")
-
 [node name="ParallaxBackground" type="Node2D" parent="."]
 
 [node name="Parallax2D" type="Parallax2D" parent="ParallaxBackground"]
@@ -76,3 +50,5 @@ repeat_times = 3
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2D4"]
 position = Vector2(1439, 574)
 texture = ExtResource("5_inssj")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]

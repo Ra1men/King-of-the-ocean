@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://c72ieuampfyqc"]
+
+[ext_resource type="Script" path="res://Script/AudioManager.gd" id="1_lmm8l"]
+[ext_resource type="AudioStream" uid="uid://n2ux3jqfqseg" path="res://Audio/Game.mp3" id="2_xjlhd"]
+[ext_resource type="AudioStream" uid="uid://dqi52cbxgtk0v" path="res://Audio/EatFish.mp3" id="3_dngcx"]
+[ext_resource type="AudioStream" uid="uid://bw1u855d5t3pr" path="res://Audio/Lose.mp3" id="4_24252"]
+[ext_resource type="AudioStream" uid="uid://umgox1bce3e7" path="res://Audio/StartGame.mp3" id="5_x0vr2"]
+[ext_resource type="AudioStream" uid="uid://d3odkxu7fksjp" path="res://Audio/Victory.mp3" id="7_4ldxn"]
+[ext_resource type="AudioStream" uid="uid://c1ayt8w5aj8bm" path="res://Audio/MenuSelect.wav" id="7_7dv6s"]
+
+[node name="AudioController" type="Node"]
+script = ExtResource("1_lmm8l")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_xjlhd")
+volume_db = -4.602
+
+[node name="EatFish" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dngcx")
+volume_db = -4.637
+
+[node name="Lose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_24252")
+volume_db = -4.602
+
+[node name="MusicStart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_x0vr2")
+
+[node name="ButtonPressed" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_7dv6s")
+
+[node name="Victory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_4ldxn")
+volume_db = -20.0

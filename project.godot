@@ -20,6 +20,7 @@ config/icon="res://Art/GoldfishIcon.png"
 
 SizeManager="*res://Script/SizeCalculator.gd"
 GameManager="*res://Script/GameManager.gd"
+AudioManager="*res://Scenes/AudioManager.tscn"
 
 [debug]
 
@@ -29,6 +30,8 @@ file_logging/max_log_files=1000
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
+window/size/borderless=true
 window/stretch/mode="viewport"
 window/max_log_files=5
 

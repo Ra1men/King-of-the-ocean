@@ -1,9 +1,9 @@
 extends Fish
 class_name EnemyFish
 
+
 var distance_traveled : float = 0
 var distance_to_end = 2880 + 400
-
 
 func init_fish(player_size : int):
 	move_speed = randf_range(1, 3)
@@ -14,7 +14,6 @@ func init_fish(player_size : int):
 	turn()
 
 func _process(_delta):
-	
 	position += direction * move_speed
 	distance_traveled += direction.length() * move_speed
 	if(distance_traveled > distance_to_end):
@@ -25,7 +24,9 @@ func _on_body_entered(player : Fish):
 		return
 		
 	if(player.size > size):
+		AudioManager.play_eat_fish()
 		queue_free()
 		player.grow()
 	else:
+		AudioManager.play_lose()
 		player.die()

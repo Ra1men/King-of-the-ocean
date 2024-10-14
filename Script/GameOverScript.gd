@@ -5,10 +5,12 @@ func _ready():
 	set_best_score()
 
 func _on_restart_pressed():
+	AudioManager.play_button_pressed()
 	GameManager.reset_game()
 	queue_free()
 
 func _on_exit_pressed():
+	AudioManager.play_button_pressed()
 	GameManager.exit_game()
 
 func set_score():

@@ -1,7 +1,7 @@
 extends Node
 
-const max_player_size = 200
-const  min_fish_size = float(0.25)
+const max_player_size = 205
+const min_fish_size = float(0.25)
 const max_fish_size = float(5)
 
 func determine_size(fish_size : int) -> Vector2:

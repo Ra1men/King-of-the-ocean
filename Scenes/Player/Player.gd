@@ -42,7 +42,10 @@ func grow():
 	var new_scale = SizeManager.determine_size(size)
 	if GameManager.score > GameManager.best_score:
 		GameManager.best_score = GameManager.score
-	
+	if size == 85:
+		player_died.emit()
+		queue_free()
+		GameManager.victory()
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector2(new_scale.x + 0.1, new_scale.y + 0.1), 0.4)
 	tween.tween_property(self, "scale", new_scale, 0.4)
