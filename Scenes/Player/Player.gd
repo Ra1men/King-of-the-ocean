@@ -16,19 +16,19 @@ func _physics_process(delta):
 	position.y = clampf(position.y, 0, edge_of_screen.y)
 	
 func move_player(delta):
+	var input_left = Input.is_action_pressed("move_left")
+	var input_right = Input.is_action_pressed("move_right")
+	var input_up = Input.is_action_pressed("move_up")
+	var input_down = Input.is_action_pressed("move_down")
 	direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	if(direction == Vector2.ZERO):
 		fish_velocity = fish_velocity.move_toward(Vector2.ZERO, acceleration * delta)
 	else:
 		fish_velocity = fish_velocity.move_toward(direction * move_speed, acceleration * delta)
-		if(direction == Vector2.LEFT  ||
-			 Input.is_action_pressed("move_left") && Input.is_action_pressed("move_up") ||
-			 Input.is_action_pressed("move_left") && Input.is_action_pressed("move_down")):
+		if(direction == Vector2.LEFT  || input_left && input_up || input_left && input_down):
 			animation.play("move_left")
 			state = "move_left"
-		elif(direction == Vector2.RIGHT  ||
-			 Input.is_action_pressed("move_right") && Input.is_action_pressed("move_up") ||
-			 Input.is_action_pressed("move_right") && Input.is_action_pressed("move_down")):
+		elif(direction == Vector2.RIGHT  || input_right && input_up || input_right && input_down):
 			animation.play("move_right")
 			state = "move_right"
 		else:
