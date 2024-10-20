@@ -50,5 +50,3 @@ repeat_times = 3
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2D4"]
 position = Vector2(1439, 574)
 texture = ExtResource("5_inssj")
-
-[node name="Music" type="AudioStreamPlayer" parent="."]

@@ -12,18 +12,19 @@ func start_game():
 
 func exit_game():
 	get_tree().quit()
-
+	check_score()
+	
 func game_over():
 	var scene = GAME_OVER_SCENE.instantiate()
 	add_child(scene)
-
+	
 func reset_game():
 	get_tree().reload_current_scene()
 	check_score()
 
 func check_score():
 	var save_file = FileAccess.open("user://save.data", FileAccess.READ)
-	if save_file != null || best_score != null:
+	if save_file != null:
 		best_score = save_file.get_32()
 	else:
 		reset_score()

@@ -6,7 +6,7 @@ var distance_traveled : float = 0
 var distance_to_end = 2880 + 400
 
 func init_fish(player_size : int):
-	move_speed = randf_range(1, 3)
+	move_speed = randf_range(2, 4)
 	var min_size = clamp(player_size - 15, 1, SizeManager.max_player_size-1)
 	var max_size = clamp(player_size + 15, 1, SizeManager.max_player_size-1)
 	size = randi_range(min_size, max_size)
@@ -30,3 +30,9 @@ func _on_body_entered(player : Fish):
 	else:
 		AudioManager.play_lose()
 		player.die()
+
+func turn():
+	if(direction.x < 0):
+		animation.play("move_left")
+	elif(direction.x > 0):
+		animation.play("move_right")

@@ -1,4 +1,11 @@
-res://Scenes/StartGame.tscn
-res://Scenes/Player/Player.gd
 res://Scenes/Player/Player.tscn
+res://Scenes/Player/Player.gd
+res://Scenes/GameOverScene.tscn
+res://Script/GameManager.gd
+res://Scenes/StartGame.tscn
 res://Scenes/Enemy/EnemyFish.tscn
+res://Scenes/MainScene.tscn
+res://Scenes/Victory.tscn
+res://Scenes/AudioManager.tscn
+res://Scenes/Enemy/EnemyFish.gd
+res://Script/Fish.gd
